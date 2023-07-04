@@ -1,0 +1,183 @@
+---
+title: "Introduction to Meta-Analysis"
+subtitle: "CMOR Lunch'n'Learn"
+author: "Ross Wilson"
+date: "2023-07-06"
+date-format: "D MMMM YYYY"
+format:
+  revealjs:
+    theme: [default, cmor.scss]
+    title-slide-attributes: 
+      data-background-image: "images/otago-pennant.png, images/cmor-banner.png, images/title-background.png"
+      data-background-size: "7%, 25%, 100%"
+      data-background-position: "3% 1%, bottom 1% left 50px,0 0"
+      data-background-repeat: "no-repeat"
+    template-partials:
+      - styles.html
+      - title-slide.html
+    margin: 0.2
+---
+
+## Systematic reviews and meta-analyses
+
+<br>
+
+***From Cochrane:***
+
+* A systematic review is a study that\
+*"attempts to identify, appraise, and synthesize all the empirical evidence that meets pre-specified eligibility criteria to answer a specific research question"*
+
+* Meta-analysis is the statistical combination of results from two or more separate studies
+
+  * Meta-analysis is often one part of a systematic review
+
+## (Potential) advantages of meta-analyses
+
+<br>
+
+::: {}
+* Improved precision
+:::
+::: {}
+* Evidence on generalisability
+:::
+::: {}
+* Resolve conflicting results from previous studies
+:::
+
+## Before doing a meta-analysis
+
+<br>
+
+* Do your systematic review well:
+
+  * Define the review aims & scope (PICO)
+  
+  * Ensure your search strategy, screening, etc. is effective
+  
+  * Identify & summarise study characteristics
+  
+  * Decide whether studies are 'similar enough' to be grouped & synthesized
+
+## Types of meta-analysis
+
+<br>
+
+::: {.fragment .highlight-red}
+* Pairwise comparisons (i.e., intervention vs. comparator; 'standard' meta-analysis)
+:::
+::: {}
+* Network meta-analysis (comparing more than two interventions in a single model)
+:::
+::: {}
+* Individual participant data meta-analysis
+:::
+
+## General approach to meta-analysis
+
+::: {.fragment .semi-fade-out fragment-index=1}
+1. Extract (or calculate) a summary statistic for each study
+
+2. Calculate (weighted) average effect across all studies
+
+3. Calculate the standard error of the summary effect (to derive confidence intervals and/or p-values)
+
+4. Estimate heterogeneity between studies
+
+5. Summarise findings graphically (usually with a **forest plot**)
+:::
+![](forest-plot.png){.fragment .absolute bottom=25 right=0 width=1050 fragment-index=1}
+
+## 1. Extract/calculate statistics for each study
+
+* For dichotomous outcomes:
+  * Odds ratio
+  * Risk ratio
+  * Risk difference
+
+* For continuous outcomes:
+  * Mean difference
+    * (post-intervention, change from baseline, adjusted post-intervention)
+  * Standardised mean difference
+
+## 1. Extract/calculate statistics for each study
+
+*  For ordinal outcomes:
+  * Usually either treated as dichotomous or continuous
+  * Also possible to estimate a proportional odds ratio
+  
+* For count outcomes:
+  * Again, usually treated as dichotomous or continuous
+  * Rate ratio or rate difference
+
+* For time-to-event outcomes:
+  * Hazard ratio
+
+## 2. Calculate weighted effect
+
+* Generally, meta-analyses use an **inverse-variance weighted method**
+
+$$\text{Weighted average} = \frac{\sum{Y_i W_i}}{\sum{W_i}}$$
+
+\ \ \ where $W_i = (1 / SE_i)^2$
+
+* For ratio measures, both the effects and standard errors are on the log scale
+  * These can be transformed back to the original scale for reporting
+
+* There are slight variants to this general approach for some methods (particularly for dichotomous outcomes)
+
+## 3. Calculate standard errors
+
+* In the general inverse-variance method, the standard error of the weighted summary statistic is
+
+$$\text{Standard error} = \frac{1}{\sqrt{\sum{W_i}}}$$
+
+* Again, different formulae for some specific methods
+
+## 4. Estimate heterogeneity
+
+* Heterogeneity is measured by\
+\
+$Q = \sum{W_i (Y_i - \overline{Y})^2}$\
+\
+and\
+\
+$I^2 = \text{max}\left\{\frac{Q - (k - 1)}{Q}, 0\right\}$\
+
+* Q is a test statistic following a chi-squared distribution, and I^2^ is interpreted as the proportion of total variance in study estimates due to heterogeneity rather than sampling error
+  * ***NOTE:*** I^2^ can be very uncertain (imprecise) when the number of studies is small
+
+## 5. Summarise findings graphically
+
+::: {.fragment .semi-fade-out fragment-index=1}
+* Meta-analyses are usually illustrated using a forest plot
+
+* A forest plot displays effect estimates for both individual studies and the overall meta-analysis result
+
+* Each study is represented by a square (usually) at the point estimate, and horizontal lines extending to bounds of the confidence interval
+
+  * The size of the block indicates the weight assigned to that study in the meta-analysis (roughly proportional to sample size)
+
+* The summary result is presented as a diamond at the bottom, centred on the meta-analysis point estimate and with width showing the confidence interval
+:::
+![](forest-plot.png){.fragment .absolute bottom=25 right=0 width=1050 fragment-index=1}
+
+## Assessing small-study bias and publication bias
+
+To be added
+
+## Software
+
+* Cochrane RevMan
+  * Manages all stages of the systematic review process, from design to data extraction, analysis, and visualiation
+  * Free for those doing Cochrane reviews, subscription for everyone else
+
+* R: there are several packages for meta-analysis
+  * See the Meta-Analysis Task View:\
+  <https://cran.r-project.org/view=MetaAnalysis>
+  * [`metafor`](https://wviechtb.github.io/metafor/) is a comprehensive package with functions for converting published results to common summary statistics, fitting inverse-variance weighted and related models, forest and funnel plots, heterogeneity measures, and diagnostic statistics (among others)
+
+## References
+
+* Cochrane Handbook for Systematic Reviews of Interventions\
+<https://training.cochrane.org/handbook/current>
