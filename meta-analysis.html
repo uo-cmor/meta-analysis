@@ -471,19 +471,6 @@
 </ul>
 </div>
 </section>
-<section id="before-doing-a-meta-analysis" class="slide level2">
-<h2>Before doing a meta-analysis</h2>
-<p><br></p>
-<ul>
-<li><p>Do your systematic review well:</p>
-<ul>
-<li><p>Define the review aims &amp; scope (PICO)</p></li>
-<li><p>Ensure your search strategy, screening, etc. is effective</p></li>
-<li><p>Identify &amp; summarise study characteristics</p></li>
-<li><p>Decide whether studies are ‘similar enough’ to be grouped &amp; synthesized</p></li>
-</ul></li>
-</ul>
-</section>
 <section id="types-of-meta-analysis" class="slide level2">
 <h2>Types of meta-analysis</h2>
 <p><br></p>
@@ -503,8 +490,22 @@
 </ul>
 </div>
 </section>
+<section id="before-doing-a-meta-analysis" class="slide level2">
+<h2>Before doing a meta-analysis</h2>
+<p><br></p>
+<ul>
+<li><p>Do your systematic review well:</p>
+<ul>
+<li><p>Define the review aims &amp; scope (PICO)</p></li>
+<li><p>Ensure your search strategy, screening, etc. is effective</p></li>
+<li><p>Identify &amp; summarise study characteristics</p></li>
+<li><p>Decide whether studies are ‘similar enough’ to be grouped &amp; synthesized</p></li>
+</ul></li>
+</ul>
+</section>
 <section id="general-approach-to-meta-analysis" class="slide level2">
 <h2>General approach to meta-analysis</h2>
+<p><br></p>
 <ol type="1">
 <li><p>Extract (or calculate) a summary statistic for each study</p></li>
 <li><p>Calculate (weighted) average effect across all studies</p></li>
@@ -515,6 +516,7 @@
 </section>
 <section id="extractcalculate-statistics-for-each-study" class="slide level2">
 <h2>1. Extract/calculate statistics for each study</h2>
+<p><br></p>
 <ul>
 <li>For dichotomous outcomes:
 <ul>
@@ -534,16 +536,19 @@
 </section>
 <section id="extractcalculate-statistics-for-each-study-1" class="slide level2">
 <h2>1. Extract/calculate statistics for each study</h2>
+<p><br></p>
 <ul>
-<li><p>For ordinal outcomes:</p></li>
-<li><p>Usually either treated as dichotomous or continuous</p></li>
-<li><p>Also possible to estimate a proportional odds ratio</p></li>
-<li><p>For count outcomes:</p>
+<li>For ordinal outcomes:
+<ul>
+<li>Usually either treated as dichotomous or continuous</li>
+<li>Also possible to estimate a proportional odds ratio</li>
+</ul></li>
+<li>For count outcomes:
 <ul>
 <li>Again, usually treated as dichotomous or continuous</li>
 <li>Rate ratio or rate difference</li>
 </ul></li>
-<li><p>For time-to-event outcomes:</p>
+<li>For time-to-event outcomes:
 <ul>
 <li>Hazard ratio</li>
 </ul></li>
@@ -566,6 +571,7 @@
 </section>
 <section id="calculate-standard-errors" class="slide level2">
 <h2>3. Calculate standard errors</h2>
+<p><br></p>
 <ul>
 <li>In the general inverse-variance method, the standard error of the weighted summary statistic is</li>
 </ul>
@@ -593,6 +599,7 @@ and<br>
 </section>
 <section id="summarise-findings-graphically" class="slide level2">
 <h2>5. Summarise findings graphically</h2>
+<p><br></p>
 <div class="fragment semi-fade-out" data-fragment-index="1">
 <ul>
 <li><p>Meta-analyses are usually illustrated using a forest plot</p></li>
@@ -608,6 +615,7 @@ and<br>
 </section>
 <section id="assessing-small-study-bias-and-publication-bias" class="slide level2">
 <h2>Assessing small-study bias and publication bias</h2>
+<p><br></p>
 <div class="fragment semi-fade-out" data-fragment-index="1">
 <ul>
 <li>Small sample bias: small studies may show larger intervention effects than larger studies
@@ -632,8 +640,8 @@ and<br>
 <li>R: there are several packages for meta-analysis
 <ul>
 <li>See the Meta-Analysis Task View:<br>
-<a href="https://cran.r-project.org/view=MetaAnalysis" class="uri">https://cran.r-project.org/view=MetaAnalysis</a></li>
-<li><a href="https://wviechtb.github.io/metafor/"><code>metafor</code></a> is a comprehensive package with functions for converting published results to common summary statistics, fitting inverse-variance weighted and related models, forest and funnel plots, heterogeneity measures, and diagnostic statistics (among others)</li>
+<a href="https://cran.r-project.org/view=MetaAnalysis" data-preview-link="true">https://cran.r-project.org/view=MetaAnalysis</a></li>
+<li><a href="https://wviechtb.github.io/metafor/" data-preview-link="true"><code>metafor</code></a> is a comprehensive package with functions for converting published results to common summary statistics, fitting inverse-variance weighted and related models, forest and funnel plots, heterogeneity measures, and diagnostic statistics (among others)</li>
 </ul></li>
 </ul>
 </section>
@@ -645,6 +653,8 @@ and<br>
 <ul>
 <li>Details of the statistical methods: <a href="https://documentation.cochrane.org/revman-kb/files/210600101/210600103/1/1654774257333/Statistical_methods_in_revman.pdf" class="uri">https://documentation.cochrane.org/revman-kb/files/210600101/210600103/1/1654774257333/Statistical_methods_in_revman.pdf</a></li>
 </ul></li>
+<li><p>Egger M, Smith GD, Altman DG. <em>Systematic Reviews in Health Care: Meta-Analysis in Context</em>, 2nd Ed. London, UK: BMJ Publishing Group. 2001.<br>
+<a href="https://doi.org/10.1002/9780470693926" class="uri">https://doi.org/10.1002/9780470693926</a></p></li>
 <li><p>Jin Z-C, Zhou X-H, He J. Statistical methods for dealing with publication bias in meta-analysis. <em>Statistics in Medicine</em> 2015;34(2):343-360<br>
 <a href="https://doi.org/10.1002/sim.6342" class="uri">https://doi.org/10.1002/sim.6342</a></p></li>
 <li><p><code>metafor</code> R package <a href="https://wviechtb.github.io/metafor/" class="uri">https://wviechtb.github.io/metafor/</a></p></li>

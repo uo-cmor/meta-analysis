@@ -45,20 +45,6 @@ format:
 * Resolve conflicting results from previous studies
 :::
 
-## Before doing a meta-analysis
-
-<br>
-
-* Do your systematic review well:
-
-  * Define the review aims & scope (PICO)
-  
-  * Ensure your search strategy, screening, etc. is effective
-  
-  * Identify & summarise study characteristics
-  
-  * Decide whether studies are 'similar enough' to be grouped & synthesized
-
 ## Types of meta-analysis
 
 <br>
@@ -73,7 +59,23 @@ format:
 * Individual participant data meta-analysis
 :::
 
+## Before doing a meta-analysis
+
+<br>
+
+* Do your systematic review well:
+
+  * Define the review aims & scope (PICO)
+  
+  * Ensure your search strategy, screening, etc. is effective
+  
+  * Identify & summarise study characteristics
+  
+  * Decide whether studies are 'similar enough' to be grouped & synthesized
+
 ## General approach to meta-analysis
+
+<br>
 
 1. Extract (or calculate) a summary statistic for each study
 
@@ -87,6 +89,8 @@ format:
 
 ## 1. Extract/calculate statistics for each study
 
+<br>
+
 * For dichotomous outcomes:
   * Odds ratio
   * Risk ratio
@@ -99,9 +103,11 @@ format:
 
 ## 1. Extract/calculate statistics for each study
 
+<br>
+
 *  For ordinal outcomes:
-  * Usually either treated as dichotomous or continuous
-  * Also possible to estimate a proportional odds ratio
+    * Usually either treated as dichotomous or continuous
+    * Also possible to estimate a proportional odds ratio
   
 * For count outcomes:
   * Again, usually treated as dichotomous or continuous
@@ -125,6 +131,8 @@ $$\text{Weighted average} = \frac{\sum{Y_i W_i}}{\sum{W_i}}$$
 
 ## 3. Calculate standard errors
 
+<br>
+
 * In the general inverse-variance method, the standard error of the weighted summary statistic is
 
 $$\text{Standard error} = \frac{1}{\sqrt{\sum{W_i}}}$$
@@ -146,6 +154,8 @@ $I^2 = \text{max}\left\{\frac{Q - (k - 1)}{Q}, 0\right\}$\
 
 ## 5. Summarise findings graphically
 
+<br>
+
 ::: {.fragment .semi-fade-out fragment-index=1}
 * Meta-analyses are usually illustrated using a forest plot
 
@@ -160,6 +170,8 @@ $I^2 = \text{max}\left\{\frac{Q - (k - 1)}{Q}, 0\right\}$\
 ![](forest-plot.png){.fragment .absolute bottom=25 right=0 width=1050 fragment-index=1}
 
 ## Assessing small-study bias and publication bias
+
+<br>
 
 ::: {.fragment .semi-fade-out fragment-index=1}
 * Small sample bias: small studies may show larger intervention effects than larger studies
@@ -179,8 +191,8 @@ $I^2 = \text{max}\left\{\frac{Q - (k - 1)}{Q}, 0\right\}$\
 
 * R: there are several packages for meta-analysis
   * See the Meta-Analysis Task View:\
-  <https://cran.r-project.org/view=MetaAnalysis>
-  * [`metafor`](https://wviechtb.github.io/metafor/) is a comprehensive package with functions for converting published results to common summary statistics, fitting inverse-variance weighted and related models, forest and funnel plots, heterogeneity measures, and diagnostic statistics (among others)
+  <https://cran.r-project.org/view=MetaAnalysis>{preview-link="true"}
+  * [`metafor`](https://wviechtb.github.io/metafor/){preview-link="true"} is a comprehensive package with functions for converting published results to common summary statistics, fitting inverse-variance weighted and related models, forest and funnel plots, heterogeneity measures, and diagnostic statistics (among others)
 
 ## References
 
