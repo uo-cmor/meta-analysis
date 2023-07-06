@@ -505,7 +505,6 @@
 </section>
 <section id="general-approach-to-meta-analysis" class="slide level2">
 <h2>General approach to meta-analysis</h2>
-<div class="fragment semi-fade-out" data-fragment-index="1">
 <ol type="1">
 <li><p>Extract (or calculate) a summary statistic for each study</p></li>
 <li><p>Calculate (weighted) average effect across all studies</p></li>
@@ -513,8 +512,6 @@
 <li><p>Estimate heterogeneity between studies</p></li>
 <li><p>Summarise findings graphically (usually with a <strong>forest plot</strong>)</p></li>
 </ol>
-</div>
-<p><img data-src="forest-plot.png" class="fragment absolute" style="bottom: 25px; right: 0px; width: 1050px; " data-fragment-index="1"></p>
 </section>
 <section id="extractcalculate-statistics-for-each-study" class="slide level2">
 <h2>1. Extract/calculate statistics for each study</h2>
@@ -609,6 +606,21 @@ and<br>
 </div>
 <p><img data-src="forest-plot.png" class="fragment absolute" style="bottom: 25px; right: 0px; width: 1050px; " data-fragment-index="1"></p>
 </section>
+<section id="assessing-small-study-bias-and-publication-bias" class="slide level2">
+<h2>Assessing small-study bias and publication bias</h2>
+<div class="fragment semi-fade-out" data-fragment-index="1">
+<ul>
+<li>Small sample bias: small studies may show larger intervention effects than larger studies
+<ul>
+<li>Non-reporting/non-publication bias</li>
+<li>Poor methodological quality</li>
+<li>Mechanistic vs.&nbsp;pragmatic designs</li>
+</ul></li>
+<li>A ‘funnel plot’ can help detect this</li>
+</ul>
+</div>
+<p><img data-src="funnel-plot.jpg" class="fragment absolute" style="bottom: 25px; right: 0px; width: 1050px; " data-fragment-index="1"></p>
+</section>
 <section id="software" class="slide level2">
 <h2>Software</h2>
 <ul>
@@ -628,8 +640,14 @@ and<br>
 <section id="references" class="slide level2">
 <h2>References</h2>
 <ul>
-<li>Cochrane Handbook for Systematic Reviews of Interventions<br>
-<a href="https://training.cochrane.org/handbook/current" class="uri">https://training.cochrane.org/handbook/current</a></li>
+<li><p>Cochrane Handbook for Systematic Reviews of Interventions<br>
+<a href="https://training.cochrane.org/handbook/current" class="uri">https://training.cochrane.org/handbook/current</a></p>
+<ul>
+<li>Details of the statistical methods: <a href="https://documentation.cochrane.org/revman-kb/files/210600101/210600103/1/1654774257333/Statistical_methods_in_revman.pdf" class="uri">https://documentation.cochrane.org/revman-kb/files/210600101/210600103/1/1654774257333/Statistical_methods_in_revman.pdf</a></li>
+</ul></li>
+<li><p>Jin Z-C, Zhou X-H, He J. Statistical methods for dealing with publication bias in meta-analysis. <em>Statistics in Medicine</em> 2015;34(2):343-360<br>
+<a href="https://doi.org/10.1002/sim.6342" class="uri">https://doi.org/10.1002/sim.6342</a></p></li>
+<li><p><code>metafor</code> R package <a href="https://wviechtb.github.io/metafor/" class="uri">https://wviechtb.github.io/metafor/</a></p></li>
 </ul>
 <div class="footer footer-default">
 

@@ -75,7 +75,6 @@ format:
 
 ## General approach to meta-analysis
 
-::: {.fragment .semi-fade-out fragment-index=1}
 1. Extract (or calculate) a summary statistic for each study
 
 2. Calculate (weighted) average effect across all studies
@@ -85,8 +84,6 @@ format:
 4. Estimate heterogeneity between studies
 
 5. Summarise findings graphically (usually with a **forest plot**)
-:::
-![](forest-plot.png){.fragment .absolute bottom=25 right=0 width=1050 fragment-index=1}
 
 ## 1. Extract/calculate statistics for each study
 
@@ -164,7 +161,15 @@ $I^2 = \text{max}\left\{\frac{Q - (k - 1)}{Q}, 0\right\}$\
 
 ## Assessing small-study bias and publication bias
 
-To be added
+::: {.fragment .semi-fade-out fragment-index=1}
+* Small sample bias: small studies may show larger intervention effects than larger studies
+  * Non-reporting/non-publication bias
+  * Poor methodological quality
+  * Mechanistic vs. pragmatic designs
+
+* A 'funnel plot' can help detect this
+:::
+![](funnel-plot.jpg){.fragment .absolute bottom=25 right=0 width=1050 fragment-index=1}
 
 ## Software
 
@@ -181,3 +186,13 @@ To be added
 
 * Cochrane Handbook for Systematic Reviews of Interventions\
 <https://training.cochrane.org/handbook/current>
+  * Details of the statistical methods: <https://documentation.cochrane.org/revman-kb/files/210600101/210600103/1/1654774257333/Statistical_methods_in_revman.pdf>
+  
+* Egger M, Smith GD, Altman DG. *Systematic Reviews in Health Care: Meta-Analysis in Context*, 2nd Ed. London, UK: BMJ Publishing Group. 2001.\
+<https://doi.org/10.1002/9780470693926>
+
+* Jin Z-C, Zhou X-H, He J. Statistical methods for dealing with publication bias in meta-analysis. *Statistics in Medicine* 2015;34(2):343-360\
+<https://doi.org/10.1002/sim.6342>
+
+* `metafor` R package
+<https://wviechtb.github.io/metafor/>
